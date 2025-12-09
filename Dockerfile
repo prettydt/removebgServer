@@ -39,8 +39,8 @@ COPY app/ ./app/
 # Create models directory
 RUN mkdir -p models
 
-# Copy models if available (optional - can be mounted as volume)
-COPY models/ ./models/ 2>/dev/null || true
+# Note: Model files should be mounted as a volume or downloaded separately
+# Example: -v $(pwd)/models:/app/models
 
 # Expose port
 EXPOSE 8000
