@@ -8,8 +8,7 @@ from contextlib import asynccontextmanager
 from typing import Optional
 
 from fastapi import FastAPI, File, UploadFile, Depends, HTTPException, status, Request
-from fastapi.responses import Response, StreamingResponse
-import io
+from fastapi.responses import Response
 
 from app.auth import verify_api_key
 from app.metrics import REQUEST_COUNT, ERROR_COUNT, get_metrics, timing_decorator
